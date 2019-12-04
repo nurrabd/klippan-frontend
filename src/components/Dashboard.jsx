@@ -15,17 +15,27 @@ class Dashboard extends Component {
         return _.map(this.props.product, list => {
 
             return(
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                        </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
-                    </Card.Body>
-                </Card>
+
+                <div className="container">
+                <div className="row">
+                    <div className="col-md-4 border border-primary">
+                        <Card Style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src="https://media.dagensps.se/app/uploads/2019/07/19100923/bmwny.jpg" />
+                            <Card.Body>
+                                <Card.Title>{list.title}</Card.Title>
+                                <Card.Text>
+                                    {list.municipality}
+                                    {list.city}
+                                    {list.text}
+                                    {list.price}
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                </div>
+                </div>
+
             );
 
         });
