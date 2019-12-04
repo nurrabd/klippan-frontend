@@ -44,6 +44,14 @@ export const getProducts = () => async dispatch => {
     });
 };
 
+export const getProductsByItems = () => async dispatch => {
+    const res = await axios.get(`${BASE_URL}/allitems`);
+    dispatch({
+        type: GET_PRODUCTS,
+        payload: res.data
+    });
+};
+
 
 
 

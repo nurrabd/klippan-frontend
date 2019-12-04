@@ -12,7 +12,14 @@ class NewAdds extends Component {
         super();
         this.state = {
 
-            todo: ''
+            municipality: '',
+            city: '',
+            type: '',
+            category: '',
+            title: '',
+            text: '',
+            price: ''
+
 
         };
         this.onChange = this.onChange.bind(this);
@@ -23,7 +30,16 @@ class NewAdds extends Component {
     onSubmit(e) {
         e.preventDefault();
         const LoginRequest = {
-            todo: this.state.todo
+            municipality: this.state.municipality,
+            city: this.state.city,
+            type: this.state.type,
+            category: this.state.category,
+            title: this.state.title,
+            text: this.state.text,
+            price: this.state.price,
+
+
+
 
         };
 
@@ -52,14 +68,93 @@ class NewAdds extends Component {
                                        className={classnames("form-control form-control-lg", {
                                            "is-invalid": ""
                                        })}
-                                       placeholder="katagori"
-                                       name="todo"
+                                       placeholder="municipality"
+                                       name="municipality"
                                        required
-                                       value={this.state.todo}
+                                       value={this.state.municipality}
                                        onChange={this.onChange}
                                 />
 
                             </div>
+                            <div className="form-group">
+                                <input type="text"
+                                       className={classnames("form-control form-control-lg", {
+                                           "is-invalid": ""
+                                       })}
+                                       placeholder="city"
+                                       name="city"
+                                       required
+                                       value={this.state.city}
+                                       onChange={this.onChange}
+                                />
+
+                            </div>
+                            <div className="form-group">
+                                <input type="text"
+                                       className={classnames("form-control form-control-lg", {
+                                           "is-invalid": ""
+                                       })}
+                                       placeholder="type"
+                                       name="type"
+                                       required
+                                       value={this.state.type}
+                                       onChange={this.onChange}
+                                />
+
+                            </div>
+                            <div className="form-group">
+                                <input type="text"
+                                       className={classnames("form-control form-control-lg", {
+                                           "is-invalid": ""
+                                       })}
+                                       placeholder="category"
+                                       name="category"
+                                       required
+                                       value={this.state.category}
+                                       onChange={this.onChange}
+                                />
+
+                            </div>
+                            <div className="form-group">
+                                <input type="text"
+                                       className={classnames("form-control form-control-lg", {
+                                           "is-invalid": ""
+                                       })}
+                                       placeholder="title"
+                                       name="title"
+                                       required
+                                       value={this.state.title}
+                                       onChange={this.onChange}
+                                />
+
+                            </div>
+                            <div className="form-group">
+                                <input type="text"
+                                       className={classnames("form-control form-control-lg", {
+                                           "is-invalid": ""
+                                       })}
+                                       placeholder="text"
+                                       name="text"
+                                       required
+                                       value={this.state.text}
+                                       onChange={this.onChange}
+                                />
+
+                            </div>
+                            <div className="form-group">
+                                <input type="text"
+                                       className={classnames("form-control form-control-lg", {
+                                           "is-invalid": ""
+                                       })}
+                                       placeholder="price"
+                                       name="price"
+                                       required
+                                       value={this.state.price}
+                                       onChange={this.onChange}
+                                />
+
+                            </div>
+
 
                             <Button className="btn-primary" type="submit" Style="width:100%">
                                 Anonsera

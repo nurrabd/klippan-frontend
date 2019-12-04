@@ -1,47 +1,32 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getProducts } from "../actions/ProductActions";
+import { getProductsByItems } from "../actions/ProductActions";
 import PropTypes from "prop-types";
 import _ from 'lodash';
 import {Button, Card} from "react-bootstrap";
 
 class Dashboard extends Component {
     componentDidMount() {
-        this.props.getProducts();
+        this.props.getProductsByItems();
     }
 
 
     renderall() {
-        return _.map(this.props.product.products, list => {
+        return _.map(this.props.product, list => {
 
             return(
-                console.log(list.municipalities)
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Body>
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+                            Some quick example text to build on the card title and make up the bulk of
+                            the card's content.
+                        </Card.Text>
+                        <Button variant="primary">Go somewhere</Button>
+                    </Card.Body>
+                </Card>
             );
-            {/*
-            _.map(list.municipalities, mun => {
-
-                _.map(mun.cities, cit => {
-
-                    _.map(cit.sells, type => {
-                        _.map(type.categories, cat => {
-
-                            _.map(cat.items, item => {
-
-                                return(
-                                    item.id
-                                );
-
-                            });
-
-                        });
-
-
-                    });
-
-                });
-
-            });
-            */}
 
         });
     }
@@ -70,14 +55,14 @@ class Dashboard extends Component {
 
 Dashboard.propTypes = {
     product: PropTypes.object.isRequired,
-    getProducts: PropTypes.func.isRequired
+    getProductsByItems: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
-    product: state.product
+    product: state.product.products
 });
 
 export default connect(
     mapStateToProps,
-    { getProducts }
+    { getProductsByItems }
 )(Dashboard);
