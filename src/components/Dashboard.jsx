@@ -12,7 +12,7 @@ class Dashboard extends Component {
 
 
     renderall() {
-        return _.map(this.props.product, list => {
+        return this.props.product.map( list => {
 
             return(
 
