@@ -6,6 +6,7 @@ import _ from 'lodash';
 import {Button, Card} from "react-bootstrap";
 import ViewAllItemsOnDashBoard from "./ViewAllItemsOnDashBoard";
 import Search from "./Search";
+import CategoryList from "./categoryList";
 
 class Dashboard extends Component {
     componentDidMount() {
@@ -34,6 +35,7 @@ class Dashboard extends Component {
                     <div className="row">
                         <div className="col">
                             <Search></Search>
+                            <CategoryList/>
                         </div>
                         <div className="col-md-12">
                             <h1 className="display-4 text-center"></h1>
