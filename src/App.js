@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import {BrowserRouter, Router, Route} from "react-router-dom";
 import NewAdds from "./components/NewAdds";
 import Dashboard from "./components/Dashboard";
+import {Container, Row} from "react-bootstrap";
 
 
 function App() {
@@ -17,15 +18,19 @@ function App() {
       <Provider store={store}>
           <BrowserRouter>
 
+              <Container>
+                  <Row>
+                      <Header/>
 
-        <Header/>
+                      <Route exact path="/Registration" component={Registration}/>
+                      <Route exact path="/Login" component={Login}/>
+                      <Route exact path="/NewAdds" component={NewAdds}/>
+                      <Route exact path="/" component={Dashboard} />
 
-        <Route exact path="/Registration" component={Registration}/>
-        <Route exact path="/Login" component={Login}/>
-        <Route exact path="/NewAdds" component={NewAdds}/>
-        <Route exact path="/" component={Dashboard} />
+                      <Footer/>
+                  </Row>
+              </Container>
 
-   <Footer/>
 
 
           </BrowserRouter>

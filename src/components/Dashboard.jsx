@@ -4,6 +4,7 @@ import { getProductsByItems } from "../actions/ProductActions";
 import PropTypes from "prop-types";
 import _ from 'lodash';
 import {Button, Card} from "react-bootstrap";
+import ViewAllItemsOnDashBoard from "./ViewAllItemsOnDashBoard";
 
 class Dashboard extends Component {
     componentDidMount() {
@@ -16,25 +17,7 @@ class Dashboard extends Component {
 
             return(
 
-                <div className="container">
-                <div className="row">
-                    <div className="col-md-4 border border-primary">
-                        <Card Style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="https://media.dagensps.se/app/uploads/2019/07/19100923/bmwny.jpg" />
-                            <Card.Body>
-                                <Card.Title>{list.title}</Card.Title>
-                                <Card.Text>
-                                    {list.municipality}
-                                    {list.city}
-                                    {list.text}
-                                    {list.price}
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                </div>
-                </div>
+               <ViewAllItemsOnDashBoard  listan = {list}/>
 
             );
 

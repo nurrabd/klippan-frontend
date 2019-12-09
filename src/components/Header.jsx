@@ -5,13 +5,13 @@ class Header extends Component {
     render() {
         return (
 
-            <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark" >
+            <Navbar collapseOnSelect expand="xl" bg="light" variant="light"  Style="width:100%; ">
                 <Navbar.Brand href="/">Klippan </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/">show all products</Nav.Link>
-                        <Nav.Link href="/NewAdds">add products</Nav.Link>
+
+
                         {
                             /*
                             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
@@ -26,10 +26,10 @@ class Header extends Component {
                         }
                     </Nav>
                     <Nav>
+                        <Nav.Link href="/NewAdds">add products</Nav.Link>
+                        <Nav.Link href="/">Medelanden</Nav.Link>
                         <Nav.Link href="/Registration">Registration</Nav.Link>
-                        <Nav.Link eventKey={2} href="/logIn">
-                            Login
-                        </Nav.Link>
+                        <Nav.Link eventKey={2} href="/logIn">Login</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
 
