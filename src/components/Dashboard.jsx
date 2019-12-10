@@ -7,6 +7,7 @@ import {Button, Card} from "react-bootstrap";
 import ViewAllItemsOnDashBoard from "./ViewAllItemsOnDashBoard";
 import Search from "./Search";
 import CategoryList from "./categoryList";
+import divWithClassName from "react-bootstrap/esm/utils/divWithClassName";
 
 class Dashboard extends Component {
     componentDidMount() {
@@ -14,13 +15,17 @@ class Dashboard extends Component {
     }
 
 
+
+
+
     renderall() {
         return this.props.product.map( list => {
 
             return(
+                <div>
 
                <ViewAllItemsOnDashBoard  listan = {list}/>
-
+                </div>
             );
 
         });
