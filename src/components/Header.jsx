@@ -20,16 +20,26 @@ class Header extends Component {
                                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                            </NavDropdown>
 
+                            </NavDropdown>
+<Nav.Link href="/Registration">Registration</Nav.Link>
                              */
                         }
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/NewAdds">add products</Nav.Link>
-                        <Nav.Link href="/">Medelanden</Nav.Link>
-                        <Nav.Link href="/Registration">Registration</Nav.Link>
-                        <Nav.Link eventKey={2} href="/logIn">Login</Nav.Link>
+                        <Nav.Link href="/NewAdds"  Style="padding-left:70px">
+                            <i className="fas fa-plus fa-2x"></i>
+                            <br/>
+                            </Nav.Link>
+                        <Nav.Link href="/"  Style="padding-left:70px">
+                            <i className="fas fa-inbox fa-2x"></i>
+                        </Nav.Link>
+
+                        <Nav.Link href="/logIn" Style="padding-left:70px" >
+                            <i className="fas fa-user fa-2x">
+
+                            </i>
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
 

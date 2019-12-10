@@ -23,7 +23,7 @@ class Search extends Component {
 
                         <Form className=" "  onSubmit={this.onSubmit}>
                         <div className="row">
-                            <div className="col-5"><Form.Group>
+                            <div className="col-md-5"><Form.Group>
 
 
                                 <Form.Control placeholder="municipality"
@@ -36,7 +36,7 @@ class Search extends Component {
 
 
                             </Form.Group></div>
-                            <div className="col-5   ">
+                            <div className="col-md-5   ">
                                 <Form.Group className="   ">
                                     <Form.Control placeholder="category"
                                                   type="text"
@@ -49,9 +49,9 @@ class Search extends Component {
 
                                 </Form.Group>
                             </div>
-                            <div className="col-2">
+                            <div className="col-md-2">
 
-                                <Button className="login" type="submit" Style="width:70%; height:70%; margin-top:2px">
+                                <Button className="login" type="submit" Style="width:100%; height:70%; margin-top:2px">
                                     Search
                                 </Button>
                             </div>
